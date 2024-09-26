@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Accounts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Questrial", "ui-sans-serif", "system-ui", "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="relative h-[100dvh] w-full bg-zinc-950 flex items-center justify-center text-white select-none"
+    >
+      <div class="inline-flex items-center gap-8">
+        <div>
+          <i
+            data-lucide="server-cog"
+            class="size-20 lg:size-32 stroke-1 stroke-white"
+          ></i>
+        </div>
+        <div>
+          <h1 class="text-5xl lg:text-7xl font-normal text-start">
+            Linear<br />
+            <span
+              class="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text font-bold"
+              >Storage.</span
+            >
+          </h1>
+        </div>
+      </div>
+      <span class="absolute bottom-2 opacity-30 font-thin text-normal"
+        >{{ current_year }} &copy;
+        <a
+          href="https://linear.net.br"
+          target="_blank"
+          class="underline-offset-2 hover:underline hover:text-cyan-400 duration-200"
+          >Linear</a
+        >
+      </span>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

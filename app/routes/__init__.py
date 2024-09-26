@@ -12,7 +12,7 @@ def favicon():
 def index(name=None):
   current_year = datetime.now().year
 
-  return render_template('hello.html', current_year=current_year, name=name)
+  return render_template('index.html', current_year=current_year)
 
 from app.routes import errors
 # Register Blueprints (routes)
