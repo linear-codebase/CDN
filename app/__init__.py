@@ -7,6 +7,7 @@ import config
 cache = Cache(config={'CACHE_TYPE': config.CACHE_TYPE})
 
 app = Flask(__name__)
+app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 CORS(app, origins="*")
 
 cache.init_app(app)

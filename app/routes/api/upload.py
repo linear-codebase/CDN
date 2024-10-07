@@ -19,8 +19,8 @@ def upload():
   if 'file' not in request.files:
     abort(400, "No file part in request")
   
-  file = request.files['file']  
-  
+  file = request.files['file']
+    
   if file.filename == '' and not custom_filename:
     abort(400, "No file selected and no custom filename provided")
     
